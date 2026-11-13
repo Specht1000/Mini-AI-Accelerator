@@ -1,0 +1,6 @@
+cpu=hardware_threads=12;openmp=off;optimized=single_thread_simd_compiler
+gpu=not compiled with CUDA
+gpu_executed=0
+repetitions=21
+warmup=5
+precision=FP32

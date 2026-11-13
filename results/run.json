@@ -1,0 +1,43 @@
+{
+  "cpu": {
+    "cores": 4,
+    "lanes": 8,
+    "clock_ghz": 3.0,
+    "bandwidth_gbs": 50.0
+  },
+  "gpu": {
+    "sms": 4,
+    "warp_size": 32,
+    "warp_issues_per_cycle": 2,
+    "tile": 16,
+    "clock_ghz": 1.5,
+    "bandwidth_gbs": 150.0,
+    "link_bandwidth_gbs": 12.0,
+    "launch_us": 10.0,
+    "transfer_latency_us": 10.0
+  },
+  "dimensions": [
+    784,
+    128,
+    64,
+    10
+  ],
+  "batches": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "validation": {
+    "cpu_max_error": 3.552713678800501e-15,
+    "gpu_max_error": 3.552713678800501e-15,
+    "arithmetic": "FP64 result validation; timing model uses FP32"
+  }
+}

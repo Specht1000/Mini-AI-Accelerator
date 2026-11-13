@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="880" height="360" fill="#ffffff"/>
+  <g stroke="#c9c9c9" stroke-width="1">
+    <line x1="110" y1="90" x2="320" y2="110"/><line x1="110" y1="90" x2="320" y2="250"/><line x1="110" y1="180" x2="320" y2="110"/><line x1="110" y1="180" x2="320" y2="180"/><line x1="110" y1="270" x2="320" y2="250"/><line x1="110" y1="270" x2="320" y2="180"/><line x1="110" y1="90" x2="320" y2="180"/><line x1="110" y1="270" x2="320" y2="110"/>
+    <line x1="320" y1="110" x2="530" y2="140"/><line x1="320" y1="180" x2="530" y2="220"/><line x1="320" y1="250" x2="530" y2="140"/><line x1="320" y1="110" x2="530" y2="220"/><line x1="320" y1="250" x2="530" y2="220"/><line x1="320" y1="180" x2="530" y2="140"/>
+    <line x1="530" y1="140" x2="740" y2="120"/><line x1="530" y1="140" x2="740" y2="240"/><line x1="530" y1="220" x2="740" y2="180"/><line x1="530" y1="220" x2="740" y2="120"/><line x1="530" y1="140" x2="740" y2="180"/><line x1="530" y1="220" x2="740" y2="240"/>
+  </g>
+  <g stroke="#333" stroke-width="1.5">
+    <g fill="#9cc0f0"><circle cx="110" cy="90" r="16"/><circle cx="110" cy="180" r="16"/><circle cx="110" cy="270" r="16"/></g>
+    <g fill="#f5c98a"><circle cx="320" cy="110" r="16"/><circle cx="320" cy="180" r="16"/><circle cx="320" cy="250" r="16"/></g>
+    <g fill="#f5c98a"><circle cx="530" cy="140" r="16"/><circle cx="530" cy="220" r="16"/></g>
+    <g fill="#9fdcae"><circle cx="740" cy="120" r="16"/><circle cx="740" cy="180" r="16"/><circle cx="740" cy="240" r="16"/></g>
+  </g>
+  <g text-anchor="middle" font-size="15" font-weight="bold" fill="#222">
+    <text x="110" y="35">Input</text><text x="320" y="35">Hidden layer 1</text><text x="530" y="35">Hidden layer 2</text><text x="740" y="35">Output</text>
+  </g>
+  <g text-anchor="middle" font-size="13" fill="#444">
+    <text x="110" y="57">784 values</text><text x="320" y="57">128 neurons · ReLU</text><text x="530" y="57">64 neurons · ReLU</text><text x="740" y="57">10 classes · softmax</text>
+  </g>
+  <g text-anchor="middle" font-size="13" fill="#1f3b73">
+    <text x="215" y="315">H1 = ReLU(X·W1 + b1)</text><text x="425" y="315">H2 = ReLU(H1·W2 + b2)</text><text x="635" y="315">P = softmax(H2·W3 + b3)</text>
+    <text x="215" y="337">100,352 multiplications</text><text x="425" y="337">8 192</text><text x="635" y="337">640</text>
+  </g>
+  <text x="768" y="185" font-size="13" fill="#1d6b3a">→ probability</text>
+  <text x="768" y="201" font-size="13" fill="#1d6b3a">   of each class</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" font-family="Segoe UI, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">From your PC to a CPU and GPU comparison</title>
+  <desc id="desc">Your PC prepares source and model data, sends an input ZIP to Colab, and receives a separate ZIP containing measured results.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="580" rx="16" fill="#f8fafc"/>
+  <text x="40" y="43" font-size="25" font-weight="bold" fill="#0f172a">One experiment, two computers, two different ZIP files</text>
+  <rect x="30" y="70" width="330" height="440" rx="14" fill="#eff6ff" stroke="#2563eb"/>
+  <rect x="435" y="70" width="330" height="440" rx="14" fill="#ecfdf5" stroke="#059669"/>
+  <rect x="840" y="70" width="330" height="440" rx="14" fill="#fff7ed" stroke="#ea580c"/>
+  <g font-size="20" font-weight="bold" text-anchor="middle" fill="#0f172a">
+    <text x="195" y="108">1. YOUR PC</text><text x="600" y="108">2. COLAB MACHINE</text><text x="1005" y="108">3. YOUR RESULTS</text>
+  </g>
+  <g fill="#ffffff" stroke="#cbd5e1">
+    <rect x="50" y="135" width="290" height="100" rx="9"/>
+    <rect x="50" y="290" width="290" height="100" rx="9"/>
+    <rect x="455" y="135" width="290" height="100" rx="9"/>
+    <rect x="455" y="290" width="290" height="100" rx="9"/>
+    <rect x="860" y="135" width="290" height="100" rx="9"/>
+    <rect x="860" y="290" width="290" height="100" rx="9"/>
+  </g>
+  <g font-size="17" text-anchor="middle" fill="#334155">
+    <text x="195" y="166" font-weight="bold">Source + trained model</text>
+    <text x="195" y="194">C++, CUDA, Python, test data</text>
+    <text x="195" y="218">Local .venv runs Python helpers</text>
+    <text x="195" y="323" font-weight="bold">cpu_gpu_cuda.zip</text>
+    <text x="195" y="351">The input package</text>
+    <text x="195" y="375">Created by prepare_demo.py</text>
+    <text x="600" y="166" font-weight="bold">Upload, extract, compile</text>
+    <text x="600" y="194">Notebook runs remote instructions</text>
+    <text x="600" y="218">nvcc builds a Linux executable</text>
+    <text x="600" y="323" font-weight="bold">CPU and NVIDIA GPU</text>
+    <text x="600" y="351">Same model, same inputs</text>
+    <text x="600" y="375">Validate, warm up, then measure</text>
+    <text x="1005" y="166" font-weight="bold">CSV + chart + report</text>
+    <text x="1005" y="194">Latency, speedup, correctness</text>
+    <text x="1005" y="218">Hardware and run metadata</text>
+    <text x="1005" y="323" font-weight="bold">cuda_results.zip</text>
+    <text x="1005" y="351">The output package</text>
+    <text x="1005" y="375">Download and keep on your PC</text>
+  </g>
+  <g fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M195 240 V280"/><path d="M340 340 H395 V185 H445"/>
+    <path d="M600 240 V280"/><path d="M745 340 H800 V185 H850"/>
+    <path d="M1005 240 V280"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#475569">
+    <text x="195" y="440">No local NVIDIA GPU required</text>
+    <text x="600" y="440">Both measured processors are here</text>
+    <text x="1005" y="440">The ZIPs have different purposes</text>
+  </g>
+  <text x="600" y="550" text-anchor="middle" font-size="18" fill="#0f172a">Opening a notebook does not upload your project folder. The input ZIP supplies the missing files.</text>
+</svg>

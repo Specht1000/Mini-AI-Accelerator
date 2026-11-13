@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">Each cell of C combines a row of A with a column of B (K multiply-adds)</text>
+  <g stroke="#555" fill="#f2f2f2">
+    <rect x="40" y="70" width="180" height="150"/><rect x="310" y="70" width="150" height="180"/><rect x="550" y="70" width="150" height="150"/>
+  </g>
+  <rect x="40" y="130" width="180" height="30" fill="#9cc0f0" stroke="#1f3b73"/>
+  <rect x="400" y="70" width="30" height="180" fill="#9fdcae" stroke="#1d6b3a"/>
+  <rect x="640" y="130" width="30" height="30" fill="#f5c98a" stroke="#a0651a" stroke-width="2"/>
+  <g font-size="26" text-anchor="middle" fill="#333"><text x="265" y="155">×</text><text x="505" y="155">=</text></g>
+  <g font-size="15" text-anchor="middle" font-weight="bold"><text x="130" y="60">A (M × K)</text><text x="385" y="60">B (K × N)</text><text x="625" y="60">C (M × N)</text></g>
+  <g font-size="13" text-anchor="middle" fill="#444">
+    <text x="130" y="245">samples × inputs</text><text x="385" y="275">layer weights</text><text x="625" y="245">layer output</text>
+  </g>
+  <g font-size="13" text-anchor="middle">
+    <text x="790" y="120" fill="#1f3b73" font-weight="bold">CPU</text>
+    <text x="790" y="138" fill="#1f3b73">a few cores,</text>
+    <text x="790" y="156" fill="#1f3b73">each calculating</text>
+    <text x="790" y="174" fill="#1f3b73">many cells</text>
+    <text x="790" y="210" fill="#1d6b3a" font-weight="bold">GPU</text>
+    <text x="790" y="228" fill="#1d6b3a">1 thread per</text>
+    <text x="790" y="246" fill="#1d6b3a">cell, working</text>
+    <text x="790" y="264" fill="#1d6b3a">in parallel</text>
+  </g>
+</svg>

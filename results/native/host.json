@@ -1,0 +1,20 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "logical_cpus": 12,
+  "omp_num_threads": "4",
+  "command": [
+    "C:\\Projetos\\LIA\\Mini AI Accelerator\\build\\benchmark.exe",
+    "--data",
+    "C:\\Projetos\\LIA\\Mini AI Accelerator\\data\\native",
+    "--output",
+    "C:\\Projetos\\LIA\\Mini AI Accelerator\\results\\native",
+    "--batches",
+    "1,8,64,128,256,1024",
+    "--repetitions",
+    "21",
+    "--warmup",
+    "5",
+    "--cpu-only"
+  ]
+}

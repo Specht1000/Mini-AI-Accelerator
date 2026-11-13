@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.20)
+project(CPUGPUBenchmark LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+option(ENABLE_CUDA "Compile actual CUDA kernels" ON)
+option(ENABLE_OPENMP "Parallelize optimized CPU with OpenMP" ON)
+
+add_executable(benchmark native/benchmark.cpp native/cpu.cpp)
+
+if(ENABLE_OPENMP)
+    find_package(OpenMP QUIET)
+    if(OpenMP_CXX_FOUND)
+        target_link_libraries(benchmark PRIVATE OpenMP::OpenMP_CXX)
+    endif()
+endif()
+
+if(ENABLE_CUDA)
+    include(CheckLanguage)
+    check_language(CUDA)
+    if(CMAKE_CUDA_COMPILER)
+        enable_language(CUDA)
+        target_sources(benchmark PRIVATE native/gpu.cu)
+        target_compile_definitions(benchmark PRIVATE HAVE_CUDA=1)
+        set_target_properties(benchmark PROPERTIES CUDA_STANDARD 17 CUDA_STANDARD_REQUIRED ON)
+    else()
+        message(WARNING "CUDA/host compiler unavailable: building CPU only.")
+    endif()
+endif()
+
+enable_testing()
+add_test(NAME numeric_products COMMAND benchmark --self-test --cpu-only)

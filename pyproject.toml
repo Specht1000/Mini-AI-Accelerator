@@ -1,0 +1,6 @@
+# Keep each statement on a single line.
+[tool.black]
+line-length = 1000
+
+[tool.ruff]
+line-length = 1000
