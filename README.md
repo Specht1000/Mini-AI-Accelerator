@@ -50,7 +50,7 @@ sequenceDiagram
     PC->>PC: Export saved model and create input ZIP
     User->>Colab: Open notebook and select GPU runtime
     PC->>Colab: Upload cpu_gpu_cuda.zip
-    Colab->>Colab: Extract source and data; compile with nvcc
+    Colab->>Colab: Extract source and data and compile with nvcc
     Colab->>Colab: Validate and measure CPU inference
     Colab->>GPU: Run and measure the same network
     GPU-->>Colab: Probabilities and completed execution
