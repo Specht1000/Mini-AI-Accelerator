@@ -556,5 +556,3 @@ The project name does not mean that a new physical accelerator was designed. The
 | H2D / D2H | Host-to-device / device-to-host transfer |
 | Warmup | Untimed execution before measurements |
 | Speedup | Reference time divided by compared time |
-#   M i n i - A I - A c c e l e r a t o r  
- 
